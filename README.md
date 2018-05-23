@@ -1,2 +1,3 @@
 # EdgeRouter-Configs
-Configurations for EdgeRouter
+
+All configs are for the Ubiquiti ERLite-3.
