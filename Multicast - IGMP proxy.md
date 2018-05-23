@@ -147,3 +147,4 @@ Install the TV7 app from the Apple Store and run it.
 * [EdgeRouter - Set up IGMP proxy and statistics](https://help.ubnt.com/hc/en-us/articles/204961854-EdgeRouter-Set-up-IGMP-proxy-and-statistics)
 * [IPTV/IGMP/Multicast Solution for Edgemax Router](https://community.ubnt.com/t5/EdgeRouter/IPTV-IGMP-Multicast-Solution-for-Edgemax-Router/td-p/1253350)
 * [Kann ich TV7 auch auf anderen Geräten als Apple TV anschauen?](https://www.init7.net/de/support/faq/TV-andere-Geraete/)
+* [EdgeRouter setup for Swiss FTTH providers](https://community.ubnt.com/t5/EdgeRouter/EdgeRouter-setup-for-Swiss-FTTH-providers/td-p/1658929)
