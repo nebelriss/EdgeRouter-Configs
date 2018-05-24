@@ -35,7 +35,8 @@ zones = {
         'interfaces' :      (
                         'eth1',
                         'eth1.30',
-                        'eth2',)
+                        'eth2',
+                        'l2tp0',)
     }
 }  # yapf: disable
 
@@ -56,27 +57,6 @@ fw_groups = {
             'ports': (
                         'http',
                         'https',)
-        },
-        'ts3_udp': {
-            'description': 'Teamspeak UDP Port Group',
-            'ports': (
-                        '9987',)
-        },
-        'ts3_tcp': {
-            'description': 'Teamspeak TCP Port Group',
-            'ports': (
-                        '30033',
-                        '10011',
-                        '41144',)
-        },
-        'ftp': {
-            'description': 'FTP Port Group',
-            'ports': (
-                        'ftp-data',
-                        'ftp',
-                        'ftps-data',
-                        'ftps',
-                        'sftp',)
         },
         'print': {
             'description': 'Print Port Group',
@@ -124,9 +104,8 @@ fw_groups = {
         'vpn': {
             'description': 'VPN Port Group',
             'ports': (
-                        'isakmp',
-                        'openvpn',
-                        'l2tp',
+                        '1701',
+                        '500',
                         '4500',)
         }
     },
@@ -285,12 +264,14 @@ rules = (
     ('ext', 'dmz', ('description "Allow SSH to DMZ"', 'action accept', 'protocol tcp', 'destination port ssh'), [4], 3100),
     # RULES 5000-5600 **************************************************************
     # Allow vpn traffic ext/int
+    # Allow vpn traffic
+    ('ext', 'loc', ('description "Allow VPN to Router"', 'action accept', 'protocol udp', 'destination group port-group vpn'), [4], 5000),
+    ('ext', 'loc', ('description "Allow ESP for VPN to Router"', 'action accept', 'protocol 50'), [4], 5100),
     # RULE 6000 ********************************************************************
     # Allow Web
     ('ext', 'dmz', ('description "Allow Web traffic to DMZ"', 'action accept', 'protocol tcp', 'destination group port-group web'), [4, 6], 6000),
     # Allow Mail
     ('ext', 'dmz', ('description "Allow Mail traffic to DMZ"', 'action accept', 'protocol tcp', 'destination group port-group email'), [4, 6], 6100),
-    # Allow TS3
     # RULE 7000 ********************************************************************
     # Allow DHCP/DHCPV6 responses from ISP
     ('ext', 'loc', ('description "Allow DHCPV4 responses from ISP"', 'action accept', 'protocol udp', 'source port bootps', 'destination port bootpc'), [4], 7000),
