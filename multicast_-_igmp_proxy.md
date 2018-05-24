@@ -75,38 +75,38 @@ ubnt@rtr1# exit
 
 * WAN_IN - Multicast UDP
 ```sh
-set firewall name WAN_IN rule 1 action accept
-set firewall name WAN_IN rule 1 description "Allow IPTV Multicast UDP"
-set firewall name WAN_IN rule 1 protocol udp
-set firewall name WAN_IN rule 1 log disable
-set firewall name WAN_IN rule 1 destination address 239.0.0.0/8
-set firewall name WAN_IN rule 1 source address 0.0.0.0/0
+ubnt@rtr1# set firewall name WAN_IN rule 1 action accept
+ubnt@rtr1# set firewall name WAN_IN rule 1 description "Allow IPTV Multicast UDP"
+ubnt@rtr1# set firewall name WAN_IN rule 1 protocol udp
+ubnt@rtr1# set firewall name WAN_IN rule 1 log disable
+ubnt@rtr1# set firewall name WAN_IN rule 1 destination address 239.0.0.0/8
+ubnt@rtr1# set firewall name WAN_IN rule 1 source address 0.0.0.0/0
 ```
 
 * WAN_IN - IGMP
 ```sh
-set firewall name WAN_IN rule 2 action accept
-set firewall name WAN_IN rule 2 description "Allow IGMP"
-set firewall name WAN_IN rule 2 protocol igmp
-set firewall name WAN_IN rule 2 log disable
+ubnt@rtr1# set firewall name WAN_IN rule 2 action accept
+ubnt@rtr1# set firewall name WAN_IN rule 2 description "Allow IGMP"
+ubnt@rtr1# set firewall name WAN_IN rule 2 protocol igmp
+ubnt@rtr1# set firewall name WAN_IN rule 2 log disable
 ```
 
 * WAN_LOCAL - Multicast UDP
 ```sh
-set firewall name WAN_LOCAL rule 1 action accept
-set firewall name WAN_LOCAL rule 1 description "Allow IPTV Multicast UDP"
-set firewall name WAN_LOCAL rule 1 protocol udp
-set firewall name WAN_LOCAL rule 1 log disable
-set firewall name WAN_LOCAL rule 1 destination address 239.0.0.0/8
-set firewall name WAN_LOCAL rule 1 source address 0.0.0.0/0
+ubnt@rtr1# set firewall name WAN_LOCAL rule 1 action accept
+ubnt@rtr1# set firewall name WAN_LOCAL rule 1 description "Allow IPTV Multicast UDP"
+ubnt@rtr1# set firewall name WAN_LOCAL rule 1 protocol udp
+ubnt@rtr1# set firewall name WAN_LOCAL rule 1 log disable
+ubnt@rtr1# set firewall name WAN_LOCAL rule 1 destination address 239.0.0.0/8
+ubnt@rtr1# set firewall name WAN_LOCAL rule 1 source address 0.0.0.0/0
 ```
 
 * WAN_LOCAL - IGMP
 ```sh
-set firewall name WAN_LOCAL rule 2 action accept
-set firewall name WAN_LOCAL rule 2 description "Allow IGMP"
-set firewall name WAN_LOCAL rule 2 protocol igmp
-set firewall name WAN_LOCAL rule 2 log disable
+ubnt@rtr1# set firewall name WAN_LOCAL rule 2 action accept
+ubnt@rtr1# set firewall name WAN_LOCAL rule 2 description "Allow IGMP"
+ubnt@rtr1# set firewall name WAN_LOCAL rule 2 protocol igmp
+ubnt@rtr1# set firewall name WAN_LOCAL rule 2 log disable
 ```
 
 
@@ -129,7 +129,7 @@ eth1          0.00b             0      173.47MB        135343       172.16.2.1
 ## Watch
 
 ### Apple TV
-> not tested by myself
+> not tested
 
 Install the TV7 app from the Apple Store and run it.
 
